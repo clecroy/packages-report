@@ -12,18 +12,31 @@ Workshop challenge checklist
 -   ~~Notice that this README is an `.Rmd` file. That means it could contain R code and will need to be rendered to create `README.md`.~~
 -   ~~Open [R/01\_write-installed-packages.R](R/01_write-installed-packages.R). Write the script as directed. Run it. Commit and push the current state.~~
 -   ~~Open [R/02\_wrangle-packages.R](R/02_wrangle-packages.R). Fill in the missing pieces of the script as directed. Run it. Commit and push the current state.~~
--   Open [R/03\_barchart-packages-built.R](R/03_barchart-packages-built.R). Fill in the missing pieces of the script as directed. Run it. Commit and push the current state.
+-   ~~Open [R/03\_barchart-packages-built.R](R/03_barchart-packages-built.R). Fill in the missing pieces of the script as directed. Run it. Commit and push the current state.~~
 -   Fill in the blanks below in this README, using the results stored elsewhere.
 -   If you get this far, write an R script to run the whole analysis and, perhaps, another script that does a `make clean` style reset.
 
 Overview
 --------
 
-The goal of packages-report is to FINISH THIS SENTENCE.
+The goal of packages-report is to produce a barchart of installed add-on packages by build.
 
-I have `FILL THIS IN!!!` add-on packages installed.
+I have `length(pkgs[[1]])` add-on packages installed.
 
 Here's how they break down in terms of which version of R they were built under, which is related to how recently they were updated on CRAN.
+
+    #> Parsed with column specification:
+    #> cols(
+    #>   Built = col_character(),
+    #>   n = col_integer(),
+    #>   prop = col_double()
+    #> )
+    #> # A tibble: 3 x 3
+    #>   Built     n   prop
+    #>   <chr> <int>  <dbl>
+    #> 1 3.4.1    10 0.106 
+    #> 2 3.4.2     1 0.0106
+    #> 3 3.4.3    83 0.883
 
 ![](figs/built-barchart.png)
 
