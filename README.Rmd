@@ -22,25 +22,27 @@ library(tidyverse)
 * ~~Notice that this README is an `.Rmd` file. That means it could contain R code and will need to be rendered to create `README.md`.~~
 * ~~Open [R/01_write-installed-packages.R](R/01_write-installed-packages.R). Write the script as directed. Run it. Commit and push the current state.~~
 * ~~Open [R/02_wrangle-packages.R](R/02_wrangle-packages.R). Fill in the missing pieces of the script as directed. Run it. Commit and push the current state.~~
-* Open [R/03_barchart-packages-built.R](R/03_barchart-packages-built.R). Fill in the missing pieces of the script as directed. Run it. Commit and push the current state.
+* ~~Open [R/03_barchart-packages-built.R](R/03_barchart-packages-built.R). Fill in the missing pieces of the script as directed. Run it. Commit and push the current state.~~
 * Fill in the blanks below in this README, using the results stored elsewhere.
 * If you get this far, write an R script to run the whole analysis and, perhaps, another script that does a `make clean` style reset.
 
 ## Overview
 
-The goal of packages-report is to FINISH THIS SENTENCE.
+The goal of packages-report is to produce a barchart of installed add-on packages by build.
 
 ```{r, include = FALSE}
 ## load data/add-on-packages-freqtable.csv here in this chunk
+pkgs <- read_csv(here("data","add-on-packages.csv"))
 ```
 
-I have `FILL THIS IN!!!` add-on packages installed.
+I have `length(pkgs[[1]])` add-on packages installed.
 
 Here's how they break down in terms of which version of R they were built under, which is related to how recently they were updated on CRAN.
 
 ```{r, echo = FALSE}
 ## print the frequency table here
 ## make it prettier if you know how
+print()
 ```
 
 ![](figs/built-barchart.png)
